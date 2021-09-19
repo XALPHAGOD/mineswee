@@ -1,0 +1,91 @@
+:root {
+  --cell-dim: 30px;
+  --cell-gap: 2px;
+  --border-rad: 20px;
+}
+
+body {
+  background-color: #171717;
+}
+
+#root {
+  color: white;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5rem;
+}
+
+#dialog {
+  width: 30vw;
+  height: 30vh;
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 5rem;
+  text-shadow: 0 0 10px black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-rad);
+}
+
+.win {
+  color: rgb(0, 255, 38);
+  box-shadow: 0 0 50px rgb(0, 164, 25) inset;
+}
+
+.lose {
+  color: rgb(255, 0, 0);
+  box-shadow: 0 0 50px rgb(164, 0, 0) inset;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#close {
+  padding: 0 5px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.8rem;
+  border-radius: 0 10px 0 10px;
+}
+
+.container {
+  background-color: white;
+  padding: var(--cell-gap);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  width: var(--cell-dim);
+  height: var(--cell-dim);
+  color: white;
+  background-color: rgb(174, 0, 255);
+  margin: var(--cell-gap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .cell:hover {
+  box-shadow: 0 0 7px rgb(174, 0, 255);
+  transform: scale(1.1);
+  transition: all 300ms ease-in-out;
+} */
